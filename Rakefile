@@ -11,9 +11,8 @@ task :default => [:test]
 
 Rake::TestTask.new('test') do |t|
   t.libs << 'lib'
-  t.pattern = 'test/tc_*.rb'
+  t.pattern = 'test/ts_*.rb'
   t.verbose = true
-  t.ruby_opts = ['-r marc', '-r test/unit']
 end
 
 Rake::RDocTask.new('doc') do |rd|
